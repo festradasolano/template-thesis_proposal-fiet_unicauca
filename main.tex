@@ -1,0 +1,315 @@
+% Distributed under the Apache license, Version v2.0
+% Copyright 2019 Felipe Estrada-Solano <festradasolano at gmail>
+% Based on Keith A. Gillow's OCIAM Thesis lyx files
+% ==============
+% DOCUMENT CLASS
+% ==============
+%\documentclass[11pt,draft]{thesis_proposal-fiet_unicauca} % draft version
+\documentclass[11pt,twoside]{thesis_proposal-fiet_unicauca} % submission version
+% ==============
+% LaTeX PACKAGES
+% ==============
+% -----
+% Color
+\usepackage{xcolor}
+% -----
+% Fonts
+\usepackage{lmodern}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
+% -----------
+% Other fonts
+\usepackage{listings}
+\usepackage{verbatim}
+% ---------
+% Page size
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=2.5cm,lmargin=3cm,rmargin=2.5cm,headheight=3cm,headsep=1cm}
+% -----------
+% Hyphenation
+\usepackage[american]{babel}
+% \usepackage[spanish]{babel}
+% -------------
+% Table columns
+\usepackage{array}
+% -------------
+% External PDFs
+\usepackage{pdfpages}
+% -------------
+% Math formulas
+\usepackage{amsmath}
+\usepackage{amssymb}
+% --------
+% Graphics
+\usepackage{graphicx}
+\graphicspath{{figures/}} % path(s)
+%\DeclareGraphicsExtensions{.eps} % extension(s)
+% ------------
+% Bibliography
+\usepackage[numbers]{natbib}
+% ------------
+% Period label separation instead of colon
+\usepackage[labelsep=period]{caption}
+% ----------------
+% Hyper-references
+
+% Draft-version
+\usepackage[unicode=true, bookmarks=true, bookmarksnumbered=true, bookmarksopen=false, breaklinks=true, pdfborder={0 0 0}, backref=page, colorlinks=true]{hyperref}
+
+% Submission-version
+% \usepackage[unicode=true, bookmarks=true, bookmarksnumbered=true, bookmarksopen=false, breaklinks=true, pdfborder={0 0 0}, colorlinks=true]{hyperref}
+% ----------------
+% Table formatting
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{makecell}
+% ---------------
+% List formatting
+\usepackage{enumitem}
+% --------------
+% Text alignment
+\usepackage{ragged2e}
+% ----------------
+% Graphic elements
+\usepackage{tikz}
+% -------------
+% Gantt diagram
+\usepackage{gantt}
+% ---
+% URL
+\usepackage{url}
+% ===============
+% LaTeX UTILITIES
+% ===============
+% ----------------
+% Hyper-references
+
+% Digital-version
+\hypersetup{pdftitle={Title of the Thesis}, pdfauthor={Name of the Student}, colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue}
+
+% Print-version
+% \hypersetup{pdftitle={Title of the Thesis}, pdfauthor={Name of the Student}, colorlinks=false}
+% ----------------
+% Grayscale colors
+\definecolor{light-gray}{gray}{0.90}
+\definecolor{medium-light-gray}{gray}{0.70}
+\definecolor{medium-dark-gray}{gray}{0.40}
+\definecolor{dark-gray}{gray}{0.20}
+% ---------------------------------------------------------------
+% Pages with more than 80% of floats become pure float-only pages
+\renewcommand{\floatpagefraction}{.8}%
+% -----------------------
+% Extra height for tables
+\renewcommand{\arraystretch}{1.6}
+% -------------
+% Abbreviations
+\newcommand{\etal}{\textit{et al.} }
+\newcommand{\cf}{\textit{cf.}, }
+\newcommand{\eg}{\textit{e.g.}, }
+\newcommand{\ie}{\textit{i.e.}, }
+\newcommand{\etc}{\textit{etc}.}
+\newcommand{\wrt}{\textit{w.r.t.} }
+% ------------------------------
+% Center text of cells in tables
+\newcommand{\centertext}[1]{\hspace*{\fill}#1\hspace*{\fill}}
+% ------------------
+% Same font for URLs
+\urlstyle{same}
+% ----------------
+% URL break styles
+\makeatletter
+\def\url@allbreakstyle{%
+  \def\UrlBreaks{\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]%
+    \do\)\do\,\do\?\do\'\do+\do\=\do\#%
+    \do A\do B\do C\do D\do E\do F\do G\do H\do I\do J\do K\do L\do M%
+    \do N\do O\do P\do Q\do R\do S\do T\do U\do V\do W\do X\do Y\do Z%
+    \do a\do b\do c\do d\do e\do f\do g\do h\do i\do j\do k\do l\do m%
+    \do n\do o\do p\do q\do r\do s\do t\do u\do v\do w\do x\do y\do z%
+    \do 0\do 1\do 2\do 3\do 4\do 5\do 6\do 7\do 8\do 9%
+  }%
+}
+\def\url@restrictedbreakstyle{%
+  \def\UrlBreaks{\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]%
+    \do\)\do\,\do\?\do\'\do+\do\=\do\#}%
+}
+\makeatother
+% ----------------------
+% Define URL break style
+\urlstyle{allbreak}
+% \urlstyle{restrictedbreakstyle}
+% ==================
+% DOCUMENT UTILITIES
+% ==================
+% -------------
+% Unicauca logo
+\def\logo{{\includegraphics[scale=0.45]{logo_unicauca.pdf}}}
+% ---------------------------------------
+% Arguments for the cover and title pages
+
+% Title of the thesis or capstone project
+\title{Title of the Thesis/Project}
+% Full name of the student
+\author{Name of the Student}
+% Name of the thesis degree (e.g., Master's, Ph.D.)
+\degree{Master's/Ph.D.}
+% Name of the program without degree
+\program{Program}
+% Full name of the advisor
+\advisor{Name of the Advisor}
+% Abbreviated advisor's degree (e.g., M.Sc., Ph.D.)
+\advisordegree{M.Sc./Ph.D.}
+% Name of the line of research
+\lineresearch{Name of the Line of Research}
+% Submission month of the proposal
+\submitmonth{Month}
+% Submission year of the proposal
+\submityear{Year}
+
+% Full name of the co-advisor (if no co-advisor, do not comment, just define \coadvisor as empty)
+\coadvisor{Name of the Co-advisor} % co-advisor
+% \coadvisor{} % no co-advisor
+% Abbreviated co-advisor's degree (e.g., M.Sc., Ph.D.)
+\coadvisordegree{M.Sc./Ph.D.}
+
+% Full name of the second student (if no co-author, do not comment, just define \coauthor as empty)
+% \coauthor{Name of the Second Student} % co-author
+\coauthor{} % no co-author
+
+% Name of the department to submit the proposal (define \department as empty for Master's and PhD proposals; define a specific department for undergraduate proposals)
+\department{} % graduate proposal
+% \department{Telematics} % undergraduate proposal
+% ------------------------------------------------------------
+% Additional arguments for the intellectual property (spanish)
+
+% Nivel del posgrado (e.g., Maestría, Doctorado)
+\posgrado{Maestría/Doctorado}
+% Grado o título a obtener (e.g., Ingeniero, Magíster, Doctor)
+\grado{Ingeniero(s)/Magíster/Doctor}
+% Nombre del programa sin grado
+\programa{Programa}
+% Objetivo general del trabajo o tesis (puede ser en inglés)
+\objetivo{Objetivo general del trabajo de grado o tesis (puede ser en inglés)}
+% Duración del trabajo o tesis (e.g., 9 meses, 2 años)
+\duracion{X años/meses}
+% Mes y año inicial del trabajo o tesis (e.g., Marzo de 2020)
+\inicio{Mes de 20XX}
+% Mes y año final del trabajo o tesis (e.g., Octubre de 2022)
+\fin{Mes de 20XX}
+% Vínculo, grado e identificación del estudiante
+\vinculoautor{Término de vinculación del estudiante.}
+\gradoautor{Ing./Mag.}
+\idautor{123456789}
+% Vínculo, grado e identificación del segundo estudiante
+\vinculocoautor{Término de vinculación del coautor.}
+\gradocoautor{Ing./Mag.}
+\idcoautor{123456789}
+% Vínculo, grado e identificación del director
+\vinculodirector{Término de vinculación del director.}
+\gradodirector{Ing./Mag./Dr.}
+\iddirector{123456789}
+% Vínculo, grado e identificación del codirector
+\vinculocodirector{Término de vinculación del codirector.}
+\gradocodirector{Ing./Mag./Dr.}
+\idcodirector{123456789}
+% Nombre completo, grado e identificación del decano
+\decano{Nombre del Decano}
+\gradodecano{Ing./Mag./Dr.}
+\iddecano{123456789}
+% Fuentes de financiación
+\fuentes{
+    \begin{itemize}[noitemsep, topsep=0pt]
+        \vspace{-8pt}
+        \item Fuente 1, naturaleza y cuantía de sus aportes, porcentaje de los costos del trabajo.
+        \item Fuente 2, naturaleza y cuantía de sus aportes, porcentaje de los costos del trabajo.
+    \end{itemize}
+}
+% Nombre del grupo de investigación a presentar la propuesta
+\grupo{Área del grupo de investigación (Acrónimo)}
+% Nombre del departamento a presentar la propuesta
+\departamento{Telemática}
+% Autor original de la idea (e.g., estudiante, docente, asesor)
+\origenidea{estudiante/docente/asesor}
+% -----------
+% Hyphenation
+%\catcode`\_=12
+%\lccode`\_`\_
+\hyphenation{}
+% ========
+% DOCUMENT
+% ========
+\begin{document}
+% -----------------------------------------------
+% Build the cover page (generated from arguments)
+\pagenumbering{gobble}
+\maketitle
+% -----------
+% Roman pages
+\begin{romanpages}
+% -----------------
+% Table of contents
+\pdfbookmark{\contentsname}{toc}
+\renewcommand{\contentsname}{\LARGE\centerline{Contents}}
+\tableofcontents{}
+% ---------------
+% List of figures
+\renewcommand{\listfigurename}{\LARGE\centerline{List of Figures}}
+\listoffigures
+% --------------
+% List of tables
+\renewcommand{\listtablename}{\LARGE\centerline{List of Tables}}
+\listoftables
+% ---------------
+% End roman pages
+\end{romanpages}
+\pagenumbering{arabic}
+% ------------------------------
+% Paragraph spacing for document
+\setlength{\parskip}{1em}
+% Paragraph spacing for sections in documents
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 4pt minus 2pt}
+% -----------------
+% Problem Statement
+\input{01-problem_statement}
+% ------------
+% State of Art
+\input{02-state_of_the_art}
+% ----------
+% Hypothesis
+\input{03-hypothesis}
+% ----------------------
+% Research Contributions
+\input{04-research_contributions}
+% ----------
+% Objectives
+\input{05-objectives}
+% -----------
+% Methodology
+\input{06-methodology}
+% ------
+% Budget
+\input{07-budget}
+% ----------------
+% Submission Terms
+\input{08-submission_terms}
+% ----------
+% References
+\renewcommand\refname{\vskip -2cm}
+\section{References}
+\label{references}
+
+Every scientific article or research work that uses theories, data or information from other documents that are considered of great importance for the dealt topic, must be referenced in the work. These references serve to the readers for endorsing what is stated in the work and provide seriousness to the same. Therefore, the proposal of Master or Doctorate Thesis, as well as their final document, must include a well-elaborated bibliographic reference. This part of the proposal Thesis must contain the list of bibliographic references that have been included in the text. Many formats exist, used around the world, that formalize the presentation of the bibliographic references. The Committee suggests using one of the following in the proposal:
+
+\begin{itemize}
+    \item IFAC/Elsevier (Harvard): uses the author-date style, \eg (Smith, 1991).
+    \item IEEE style: uses an ordered number by the occurrence in the text, \ie [No.]. IEEE is the format style provided in this template.
+\end{itemize}
+
+\small
+\bibliographystyle{ieeetr}
+\bibliography{09-references}
+% -------------------------------
+% Intellectual Property Agreement
+\makeagreement
+% ------------
+\end{document}

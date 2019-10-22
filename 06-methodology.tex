@@ -1,0 +1,73 @@
+\section{Methodology, Activities, and Schedule}
+\label{sec:methodology}
+
+\subsection{Methodology}
+\label{sub:methodology}
+
+It must be taken into account that the methodological design is the basis for planning all the activities that the project demands and for determining the required human and financial resources.
+
+The activities must correspond to a working methodology and reflect the logical structure of the innovation, research, and development process; these activities must be organized according to the selected methodological approach.
+
+Consequently, the employed methodology must reflect the articulation between the study objectives and the methodological procedures for meeting such objectives. It must be indicated the process to follow for collecting the information as well as the organization, systematization, data analysis, and outcomes presentation.
+
+\subsection{Activities}
+\label{sub:activities}
+
+First general activity.
+
+\begin{itemize}
+    \item First specific activity of the first general activity.
+    
+    \item Second specific activity of the first general activity.
+    
+    \item Third specific activity of the first general activity.
+\end{itemize}
+
+Second general activity.
+
+\begin{itemize}
+    \item First specific activity of the second general activity.
+    
+    \item Second specific activity of the second general activity.
+    
+    \item Third specific activity of the second general activity.
+\end{itemize}
+
+\subsection{Schedule}
+\label{sub:schedule}
+
+As depicted in Figure \ref{fig:schedule}, the schedule of activities must be presented in a Gantt Diagram that shows the initial date and duration of each one of the general and specific activities.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{gantt}[xunitlength=0.5cm, fontsize=\scriptsize, titlefontsize=\small, drawledgerline=true]{10}{24}
+        \begin{ganttitle}
+            \titleelement{Year 1}{12}
+            \titleelement{Year 2}{12}
+        \end{ganttitle}
+        
+        \begin{ganttitle}
+            \titleelement{Q1}{3}
+            \titleelement{Q2}{3}
+            \titleelement{Q3}{3}
+            \titleelement{Q4}{3}
+            \titleelement{Q1}{3}
+            \titleelement{Q2}{3}
+            \titleelement{Q3}{3}
+            \titleelement{Q4}{3}
+        \end{ganttitle}
+        
+        \ganttgroup{\textbf{\footnotesize General Activity A1}}{1}{11}
+        \ganttbar{Specific activity A1.1}{1}{3}
+        \ganttbar[pattern=crosshatch, color=blue]{Specific activity A1.2}{3}{7}
+        \ganttbar[pattern=, fill=gray]{Specific activity A1.3}{8}{4}
+
+        \ganttgroup{\textbf{\footnotesize General Activity A2}}{12}{12}
+        \ganttbar[pattern=north east lines, fill=medium-light-gray]{Specific activity A2.1}{12}{4}
+        \ganttbarcon[pattern=grid, color=blue, fill=light-gray]{Specific activity A2.2}{16}{4}
+        \ganttbarcon[pattern=dots, color=blue, fill=light-gray]{Specific activity A2.3}{20}{4}
+    \end{gantt}
+    
+    \caption{Schedule of activities}
+    \label{fig:schedule}
+\end{figure}
