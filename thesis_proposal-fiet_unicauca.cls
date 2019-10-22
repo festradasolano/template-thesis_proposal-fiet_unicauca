@@ -3,8 +3,8 @@
 % ------------------------------------
 %   LaTeX template of thesis proposals for the Faculty of Electronic and Telecommunications Engineering (FIET) of the University of Cauca, Colombia
 %
-%   Date:    2019/10/07
-%   Version: v1.5
+%   Date:    2019/10/21
+%   Version: v1.6
 %   Authors: Felipe Estrada-Solano
 %
 %   Distributed under the Apache license, Version v2.0
@@ -455,16 +455,16 @@
     \begin{table}[!h]
         \raggedright
         \begin{tabular}{m{0.45\textwidth} m{0.03\textwidth} m{0.45\textwidth}}
-            
+
             & & \\
             & & \\
-            
+
             \cline{1-1}
             \ifx\@coadvisor\@empty % check if coadvisor is empty
             \else
                 \cline{3-3}
             \fi
-            
+
             \makecell[ml]{Director \\ {\@gradodirector} {\@advisor}} &
             &
             \ifx\@coadvisor\@empty % check if coadvisor is empty
@@ -472,16 +472,16 @@
                 \makecell[ml]{Codirector \\ {\@gradocodirector} {\@coadvisor}}
             \fi
             \\
-            
+
             & & \\
             & & \\
-            
+
             \cline{1-1}
             \ifx\@coauthor\@empty % check if coadvisor is empty
             \else
                 \cline{3-3}
             \fi
-            
+
             \makecell[ml]{Estudiante \\ {\@gradoautor} {\@author}} &
             &
             \ifx\@coauthor\@empty % check if coadvisor is empty
@@ -489,30 +489,13 @@
                 \makecell[ml]{Estudiante \\ {\@gradocoautor} {\@coauthor}}
             \fi
             \\
-            
+
             & & \\
             & & \\
-            
+
             \cline{1-1}
             \makecell[ml]{Decano Facultad \\ {\@gradodecano} {\@decano}} & & \\
 
-            % Estudiante & \\
-            % \cline{2-2}
-            % & {\@gradoautor} {\@author} \\
-            % & \\
-
-            % \ifx\@coauthor\@empty % check if coauthor is empty
-            % \else % not empty
-            %     Estudiante & \\
-            %     \cline{2-2}
-            %     & {\@gradocoautor} {\@coauthor} \\
-            %     & \\
-            % \fi
-            
-            % Decano Facultad & \\
-            % \cline{2-2}
-            % & {\@gradodecano} {\@decano} \\
-    
         \end{tabular}
     \end{table}
 }
