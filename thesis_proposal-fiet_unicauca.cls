@@ -18,8 +18,8 @@
 % Identification
 % --------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{thesis_proposal-fiet_unicauca}[2018/06/09 v1.4 Thesis Proposal FIET Unicauca]
-%\typeout{repository}
+\ProvidesClass{thesis_proposal-fiet_unicauca}[2019/10/21 v1.6 Thesis Proposal FIET Unicauca]
+\typeout{https://github.com/festradasolano/template-thesis_proposal-fiet_unicauca}
 
 % ----------------
 % Class Definition
